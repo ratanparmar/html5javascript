@@ -32,7 +32,7 @@ function Circle(x,y,radius,dx,dy){
     this.dx=dx;
     this.dy=dy;
     this.minRadius = radius;
-    //console.log(this.radius+" before resizing");
+    
     this.color = colorArray[Math.floor(Math.random()*colorArray.length)];
     this.draw=function(){
         c.beginPath();
@@ -72,7 +72,7 @@ function Circle(x,y,radius,dx,dy){
 var circleArr =[];
 
 function init(){
-    //console.log("hi");
+   
     circleArr = [];
     for (var i = 0; i < 1300; i++) {
         var radius = Math.random()*3+1;
@@ -87,7 +87,7 @@ function init(){
 
     function animate(){
         requestAnimationFrame(animate);
-        //console.log(animate);
+       
         c.clearRect(0,0,window.innerWidth,window.innerHeight);
         for (var i =0 ; i < circleArr.length; i++) {
             circleArr[i].update();
